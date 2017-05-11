@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>MO&#39;s Algorithm - TongWei@NJU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MO’s Algorithm is used to deal with problems without update operations. The idea of MO’s Algorithm is to pre-process all queries so that result of one query can be used in next query.Blow are steps:">
+<meta name="keywords" content="Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MO&#39;s Algorithm">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/MO-s-Algorithm/index.html">
+<meta property="og:site_name" content="TongWei@NJU">
+<meta property="og:description" content="MO’s Algorithm is used to deal with problems without update operations. The idea of MO’s Algorithm is to pre-process all queries so that result of one query can be used in next query.Blow are steps:">
+<meta property="og:updated_time" content="2016-07-08T05:53:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MO&#39;s Algorithm">
+<meta name="twitter:description" content="MO’s Algorithm is used to deal with problems without update operations. The idea of MO’s Algorithm is to pre-process all queries so that result of one query can be used in next query.Blow are steps:">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-MO-s-Algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MO&#39;s Algorithm
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/04/07/MO-s-Algorithm/" class="article-date">
+  <time datetime="2016-04-07T08:20:50.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MO’s Algorithm is used to deal with problems without update operations. The idea of MO’s Algorithm is to pre-process all queries so that result of one query can be used in next query.<br>Blow are steps:</p>
+<ol>
+<li>Sort all queries in a way that queries with L values from 0 to $\sqrt{n}−1$ are put together, then all queries from $\sqrt{n}$ to $2 \times \sqrt{n}−1$, and so on.</li>
+<li>Process all queries one by one in a way that every query uses sum computed in previous query.<ul>
+<li>Let ‘ans’ be answer of previous query.</li>
+<li>Remove extra elements of previous query and update answer.</li>
+<li>Add new elements of current query and update answer.<br><strong>here attention that you should make sure it only costs $O(1)$ that is constant time (but sometimes $O(log ⁡)$$ is also tolerable) to update the answer when add or remove one element Here are some basic problems can be solved using MO’s Algorithm.</strong></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><a href="http://codeforces.com/problemset/problem/86/D" target="_blank" rel="external">CF 86D</a></li>
+<li><a href="http://codeforces.com/problemset/problem/617/E" target="_blank" rel="external">CF 617E</a></li>
+<li><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5213" target="_blank" rel="external">HDU 5213</a></li>
+<li><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5381" target="_blank" rel="external">HDU 5381</a></li>
+<li><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5145" target="_blank" rel="external">HDU 5145</a></li>
+<li><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4638" target="_blank" rel="external">HDU 4638</a></li>
+<li><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4358" target="_blank" rel="external">HDU 4385</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/08/Facebook-Hacker-Cup-2016-Qualification-Round/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Facebook Hacker Cup 2016 Qualification Round
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/07/Generate-a-1024-1024-picture-with-C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Generate a 1024*1024 picture with C++&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Tong Wei&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Hausdorff distance - TongWei@NJU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This post is a basic introduction to Hausdorff  distance.  Definition   where $d(\cdot,\cdot)$ is any metric between points, A and B are point sets. Brute force algorithm:1234567891. h = 02. for evert">
+<meta name="keywords" content="Math">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hausdorff distance">
+<meta property="og:url" content="http://yoursite.com/2016/07/08/Hausdorff-distance/index.html">
+<meta property="og:site_name" content="TongWei@NJU">
+<meta property="og:description" content="This post is a basic introduction to Hausdorff  distance.  Definition   where $d(\cdot,\cdot)$ is any metric between points, A and B are point sets. Brute force algorithm:1234567891. h = 02. for evert">
+<meta property="og:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/Image17_trans.gif">
+<meta property="og:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-model-gray.gif">
+<meta property="og:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-image-gray.gif">
+<meta property="og:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-model-bit.gif">
+<meta property="og:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-image-bit.gif">
+<meta property="og:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/sc1-match.gif">
+<meta property="og:updated_time" content="2016-07-08T12:03:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hausdorff distance">
+<meta name="twitter:description" content="This post is a basic introduction to Hausdorff  distance.  Definition   where $d(\cdot,\cdot)$ is any metric between points, A and B are point sets. Brute force algorithm:1234567891. h = 02. for evert">
+<meta name="twitter:image" content="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/Image17_trans.gif">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-Hausdorff-distance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hausdorff distance
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/08/Hausdorff-distance/" class="article-date">
+  <time datetime="2016-07-08T11:13:19.000Z" itemprop="datePublished">2016-07-08</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This post is a basic introduction to <strong>Hausdorff  distance</strong>.</p>
+<ul>
+<li>Definition</li>
+</ul>
+<p><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/Image17_trans.gif" alt="(eq. 1)"></p>
+<p>where $d(\cdot,\cdot)$ is any metric between points, A and B are point sets.</p>
+<p>Brute force algorithm:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1. h = 0</div><div class="line">2. for everty point $a_i$ of A,</div><div class="line">    2.1 shortest = Inf;</div><div class="line">    2.2 for every point $b_i$ of B,</div><div class="line">            $d_&#123;ij&#125; = d(a_i, b_j)$</div><div class="line">            if $d_&#123;ij&#125;$ &lt; shortest then</div><div class="line">                    shortest = $d_&#123;ij&#125;$</div><div class="line">    2.3 if shortest &gt; h then</div><div class="line">            h = shortest</div></pre></td></tr></table></figure></p>
+<ul>
+<li>Application examples<br>One of the main application of the Hausdorff distance is image matching, used for instance in image analysis, visual navigation of robots, computer-assisted surgery, etc. Basically, the Hausdorff metric will serve to check if a template image is present in a test image ;  the lower the distance value, the best the match. That method gives interesting results, even in presence of noise or occlusion (when the target is partially hidden). </li>
+</ul>
+<p>Say the small image below is our template, and the large one is the test image :<br><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-model-gray.gif" alt="template">  <img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-image-gray.gif" alt="test"><br>We want to find if the small image is present, and where, in the large image. The first step is to extract the edges of both images, so to work with binary sets of points, lines or polygons : </p>
+<p><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-model-bit.gif" alt="template">      <img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-image-bit.gif" alt="test"></p>
+<p>Edge extraction is usually done with one of the many edge detectors known in image processing, such as Canny edge detector, Laplacian, Sobel, etc. After applying <a href="http://www.englib.cornell.edu/thesesabstracts/January95/rucklidge.html" target="_blank" rel="external">Rucklidge’s algorithm</a> that minimizes Hausdorff distance between two images, the computer found a best match :<br><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/sc1-match.gif" alt=""></p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/14/Project-Euler-Problem-193/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Project Euler Problem 193
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/07/convex-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Convex Function&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Tong Wei&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

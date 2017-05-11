@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Facebook Hacker Cup 2016 Qualification Round - TongWei@NJU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is the first time for me registering this competitive contest and it’s somehow similar with Google Code Jam. The first three problems didn’t need too much time to solve, but I didn’t come up with">
+<meta name="keywords" content="Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Facebook Hacker Cup 2016 Qualification Round">
+<meta property="og:url" content="http://yoursite.com/2016/04/08/Facebook-Hacker-Cup-2016-Qualification-Round/index.html">
+<meta property="og:site_name" content="TongWei@NJU">
+<meta property="og:description" content="This is the first time for me registering this competitive contest and it’s somehow similar with Google Code Jam. The first three problems didn’t need too much time to solve, but I didn’t come up with">
+<meta property="og:updated_time" content="2016-07-08T05:53:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Facebook Hacker Cup 2016 Qualification Round">
+<meta name="twitter:description" content="This is the first time for me registering this competitive contest and it’s somehow similar with Google Code Jam. The first three problems didn’t need too much time to solve, but I didn’t come up with">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-Facebook-Hacker-Cup-2016-Qualification-Round" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Facebook Hacker Cup 2016 Qualification Round
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/04/08/Facebook-Hacker-Cup-2016-Qualification-Round/" class="article-date">
+  <time datetime="2016-04-08T08:12:20.000Z" itemprop="datePublished">2016-04-08</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This is the first time for me registering this competitive contest and it’s somehow similar with Google Code Jam. The first three problems didn’t need too much time to solve, but I didn’t come up with solution to Problem D.</p>
+<h2 id="Probelms-Link"><a href="#Probelms-Link" class="headerlink" title="Probelms Link"></a><a href="http://codeforces.com/gym/100869" target="_blank" rel="external">Probelms Link</a></h2><p>Problem A: brute force algorithm…using unordered_map.<br>Problem B: greedy algorithm.<br>Problem C: using sliding window technique.<br>Problem D: using dynamic programming.<br><strong>When printing the chosen list of words, operations are saved when consecutive words have common prefixes. As such, it can be shown that an optimal solution can always be produced by printing words in lexicograghical order.</strong><br>After sorting all N words, we must decide which K of them to use. In order to calculate the number of operations required to print a word, we only care about the previous word that was printed. As such, this problem can be solved with dynamic programming, with the state DP[i][c] = minimum number of operations required to print c words, the last of which was word i. For each initial word i, DP[i][1] = L[i] + 1 (where L[i] is the length of the ith word). The final answer will then be the smallest value DP[i][K] + L[i], for some final word i.<br>Another thing need to be done is pre-calculate common prefix between the ith word and the jth word, we precompute LCP[i] = the length of common prefix of words i and i + 1, and to achieve what we need can using a simply RMQ technique.<br>Last by not least, congratulations! you are advanced to Round 1 of the 2016 Facebook Hacker Cup! :P</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h2><p>I got Time limit exceeded several times on problem D. I thought the time complexity of my code is O(N2×K)O(N2×K) which shouldn’t too slow. After debugging one day, I found the reason is math function log is too slow that cann’t be considered as constant time.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/17/Facebook-Hacker-Cup-2016-Round-1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Facebook Hacker Cup 2016 Round 1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/07/MO-s-Algorithm/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MO&#39;s Algorithm&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Tong Wei&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

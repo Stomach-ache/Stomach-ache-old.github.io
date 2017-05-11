@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>TongWei@NJU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="TongWei@NJU">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="TongWei@NJU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TongWei@NJU">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer">
+      <article id="post-Project-Euler-249" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/14/Project-Euler-249/">Project Euler 249</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/08/14/Project-Euler-249/" class="article-date">
+  <time datetime="2016-08-14T02:47:34.000Z" itemprop="datePublished">2016-08-14</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Prime-Subset-Sums"><a href="#Prime-Subset-Sums" class="headerlink" title="Prime Subset Sums"></a><a href="https://projecteuler.net/problem=249" target="_blank" rel="external">Prime Subset Sums</a></h2><p>I get this task solved with Dynamic Programming. My code runs in 3.52223s. Cause it needs a large amount of modulo operations, so we’d better replace them with minus operations and it boosts my solution from 5.xxxx seconds to 3.xxx seconds.<br>Back to the problem description. As we all known, the number of subsets is too large that it’s impossible to iterate each subset. But the main idea here is the sum of elements of each subset is relatively small.<br>Overall, this is an easy one but with 60% difficulty rating.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProjectEuler/">ProjectEuler</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Project-Euler-214" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/13/Project-Euler-214/">Project Euler 214</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/08/13/Project-Euler-214/" class="article-date">
+  <time datetime="2016-08-13T00:18:42.000Z" itemprop="datePublished">2016-08-13</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Totient-Chains"><a href="#Totient-Chains" class="headerlink" title="Totient Chains"></a><a href="https://projecteuler.net/problem=214" target="_blank" rel="external">Totient Chains</a></h2><p>Nothing is new in this problem. I solved it by the first try, and my code runs in 2.57885s.<br>First I compute the value of Euler’s totient function for each number from 1 to $4 \times 10^7$. This can be done like prime seive in $O(N \log N)$.<br>Then using another array to keep the length of totient chain start from each integer (this can be done fast because length of current integer number i only depends on length of chain start with phi[i]) and what we need is those chains that start with a prime and length equal to 25.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProjectEuler/">ProjectEuler</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Project-Euler-211" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/12/Project-Euler-211/">Project Euler 211</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/08/12/Project-Euler-211/" class="article-date">
+  <time datetime="2016-08-12T01:00:43.000Z" itemprop="datePublished">2016-08-12</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Divisor-Square-Sum"><a href="#Divisor-Square-Sum" class="headerlink" title="Divisor Square Sum"></a><a href="https://projecteuler.net/problem=211" target="_blank" rel="external">Divisor Square Sum</a></h2><p>I first solved this problem by bruteforce. It cost 14.7125 seconds to yield the result which is definitly below my expectation.<br>The method is for each number i, add its contribution (e.g. i * i) to all its multiples. Time complexity of this method should be $O(n \log{n})$.</p>
+<p>trying to improve bruteforce method……</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProjectEuler/">ProjectEuler</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Project-Euler-187" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/11/Project-Euler-187/">Project Euler 187</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/08/11/Project-Euler-187/" class="article-date">
+  <time datetime="2016-08-11T02:22:55.000Z" itemprop="datePublished">2016-08-11</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Semiprimes"><a href="#Semiprimes" class="headerlink" title="Semiprimes"></a><a href="https://projecteuler.net/problem=187" target="_blank" rel="external">Semiprimes</a></h2><p>This is a rather simply problem whose difficulty rating is only 25%. I solve it by generating all primes smaller than $10^8$ and according to the definition of <strong>Semiprimes</strong>, a semiprime is composed by the product of two primes. So we can iterate all possible pair of primes until their product larger than $10^8$.<br>My code runs in about 1.8s and actually I generated primes under $\frac{10^8}{2}$.<br>Besides, there is a builtin function named <strong><a href="https://reference.wolfram.com/language/ref/PrimePi.html" target="_blank" rel="external">PrimePi</a></strong> or something similar in a few programming languages. Also we can use primeseive to generate primes we need when using C++.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ProjectEuler/">ProjectEuler</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Zeckendorf-Representation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/17/Zeckendorf-Representation/">Zeckendorf Representation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/17/Zeckendorf-Representation/" class="article-date">
+  <time datetime="2016-07-17T03:03:19.000Z" itemprop="datePublished">2016-07-17</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Zeckendorf Representation says that <strong>every positive integer can be uniquely written as a sum of nonconsecutive terms of the Fibonacci sequence</strong>.<br>For example, 100 = 3 + 8 + 89.</p>
+<ul>
+<li><p>existence proof<br>  Take n as a positive integer and f_i is the largest Fibonacci number that smaller than n.<br>  If we eliminate f<em>i from n, than n shall smaller than f</em>{i-1} (why?).<br>  n will be zero at then end. you can simulate the process for deeper understanding.</p>
+</li>
+<li><p>uniqueness proof<br>  As we all known, there is no way to represent a Fibonacci number as a nonconsecutive distinct Fibonacci numbers sequenc except itself(think why?).<br>  Assume x is a Fibonacci number, then we can not find a nonconsecutive distinct Fibonacci numbers sequence that smaller than x whose sum equals to x(why?).<br>  To be more specifically, sum of two different(at least one element differs) nonconsecutive Fibonacci Number sequence can not be equal.</p>
+</li>
+</ul>
+<p>I found a coding method occasionally called <a href="https://www.wikiwand.com/en/Fibonacci_coding" target="_blank" rel="external">Fibonacci coding</a> that is closely related to Zeckendorf Representation. and in this article, they offered a way to compute Zeckendorf Representation of a particular integer and it’s easy understanding and simulating, of course very fast.</p>
+<p>And <a href="https://projecteuler.net/problem=297" target="_blank" rel="external">Here</a> is challenge from Project Euler which can be solved using method which similar with the way mentioned by the former link.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/math/">math</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Project-Euler-Problem-193" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/14/Project-Euler-Problem-193/">Project Euler Problem 193</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/14/Project-Euler-Problem-193/" class="article-date">
+  <time datetime="2016-07-14T02:56:24.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://projecteuler.net/problem=193" target="_blank" rel="external">Problem Link</a></p>
+<h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>A positive integer n is called <strong>squarefree</strong>, if no square of a prime divides n, thus 1, 2, 3, 5, 6, 7, 10, 11 are squarefree, but not 4, 8, 9, 12.<br>How many squarefree numbers are there below $2^{50}$?</p>
+<p>Let’s introduce mobius function first, it looks like this:<br><img src="https://raw.githubusercontent.com/Stomach-ache/Picture/master/%E9%80%89%E5%8C%BA_001.png" alt="Mobius Function"></p>
+<p>Now the answer should be equal to: $\sum_{k=1}^{sqrt{N}} floor(N / k^2) * mobius(k)$</p>
+<p>A quick way to compute mobius(k) for all 1 &lt;= k &lt;= n is to use a sieve to find a prime divisor for each such k. After this, it is easy to apply following equation:<br><strong>mobius(n) = 0 if n % p^2 = 0 else -mobius(n / p). </strong><br>here p is a prime divisor of n.<br>below is my code,</p>
+<script src="https://gist.github.com/Stomach-ache/e0949316e42141e7367a339cecf777bd.js"></script>
+
+<p>Alternatively, we can also use inclusion-exclusion princple which is more intuitive.</p>
+<script src="https://gist.github.com/Stomach-ache/0cc06cf66d1a65a967b13005ce97162a.js"></script>
+
+<p><strong>Actually, mobius function is the sign in the inclusion-exclusion principle :-)</strong></p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Project-Euler/">Project Euler</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Hausdorff-distance" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/08/Hausdorff-distance/">Hausdorff distance</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/08/Hausdorff-distance/" class="article-date">
+  <time datetime="2016-07-08T11:13:19.000Z" itemprop="datePublished">2016-07-08</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This post is a basic introduction to <strong>Hausdorff  distance</strong>.</p>
+<ul>
+<li>Definition</li>
+</ul>
+<p><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/Image17_trans.gif" alt="(eq. 1)"></p>
+<p>where $d(\cdot,\cdot)$ is any metric between points, A and B are point sets.</p>
+<p>Brute force algorithm:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">1. h = 0</div><div class="line">2. for everty point $a_i$ of A,</div><div class="line">    2.1 shortest = Inf;</div><div class="line">    2.2 for every point $b_i$ of B,</div><div class="line">            $d_&#123;ij&#125; = d(a_i, b_j)$</div><div class="line">            if $d_&#123;ij&#125;$ &lt; shortest then</div><div class="line">                    shortest = $d_&#123;ij&#125;$</div><div class="line">    2.3 if shortest &gt; h then</div><div class="line">            h = shortest</div></pre></td></tr></table></figure></p>
+<ul>
+<li>Application examples<br>One of the main application of the Hausdorff distance is image matching, used for instance in image analysis, visual navigation of robots, computer-assisted surgery, etc. Basically, the Hausdorff metric will serve to check if a template image is present in a test image ;  the lower the distance value, the best the match. That method gives interesting results, even in presence of noise or occlusion (when the target is partially hidden). </li>
+</ul>
+<p>Say the small image below is our template, and the large one is the test image :<br><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-model-gray.gif" alt="template">  <img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-image-gray.gif" alt="test"><br>We want to find if the small image is present, and where, in the large image. The first step is to extract the edges of both images, so to work with binary sets of points, lines or polygons : </p>
+<p><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-model-bit.gif" alt="template">      <img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/ex1-image-bit.gif" alt="test"></p>
+<p>Edge extraction is usually done with one of the many edge detectors known in image processing, such as Canny edge detector, Laplacian, Sobel, etc. After applying <a href="http://www.englib.cornell.edu/thesesabstracts/January95/rucklidge.html" target="_blank" rel="external">Rucklidge’s algorithm</a> that minimizes Hausdorff distance between two images, the computer found a best match :<br><img src="http://cgm.cs.mcgill.ca/~godfried/teaching/cg-projects/98/normand/sc1-match.gif" alt=""></p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-convex-function" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/07/convex-function/">Convex Function</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/07/convex-function/" class="article-date">
+  <time datetime="2016-07-07T10:15:43.000Z" itemprop="datePublished">2016-07-07</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Today I come cross a question about ‘why raised functions are called concave functions’ on zhihu. It is obviously that some pepole misunderstand the concept of convex function and concave function.</p>
+<ol>
+<li><p>So let we start with ‘convex set’.<br>In Euclidean space, a <strong>convex set</strong> is the region such that, for every pair of points within the region, every point on the straight line segment that joins the pair of points is also within the region.<br>for example:<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Convex_polygon_illustration1.svg/440px-Convex_polygon_illustration1.svg.png" alt="Illustration of a convex set"></p>
+</li>
+<li><p>epigraph(or supergraph)<br>the epigraph or supergraph of a function $f : R^n\rightarrow R$ is the set of points lying on or above its graph:<br>$$epi\ f = {(x, \mu): x \in \mathbb{R}^n, \mu \in \mathbb{R}, \mu \geq f(x)} \subseteq \mathbb{R}^{n+1}$$<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epigraph_convex.svg/400px-Epigraph_convex.svg.png" alt="Illustration of epigraph"></p>
+</li>
+<li><p>judge convex function using epigraph<br>A function is convex if and only if its epigraph is a convex set.</p>
+</li>
+<li><p>Convex Hull<br>the convex hull may be defined as the intersection of all convex sets containing X.<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/ConvexHull.svg/440px-ConvexHull.svg.png" alt="Illustration of convex hull"><br>The easiest and most popular method to calculate convex hull is Graham Algorithm which costs $O(n\times log\ n)$ time.</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Matrix-Factorization" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/07/Matrix-Factorization/">Matrix Factorization</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/07/07/Matrix-Factorization/" class="article-date">
+  <time datetime="2016-07-07T07:44:49.000Z" itemprop="datePublished">2016-07-07</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Matrix Factorization is an important method for matrix completion.<br>Besides, there are many matrix factorization methods and this post only offers a simple implementation of matrix factorization.</p>
+<p><script src="https://gist.github.com/Stomach-ache/ff071b18462b4a618ae1a70615a74613.js"></script>script&gt;</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Machine-Learning/">Machine Learning</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <article id="post-Permutation-Graph" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/27/Permutation-Graph/">Permutation Graph</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/04/27/Permutation-Graph/" class="article-date">
+  <time datetime="2016-04-27T08:10:40.000Z" itemprop="datePublished">2016-04-27</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Until now, I encountered two problems solved using “permutation graph”. I even don’t hear about this before, but now I think it is useful. If there is a problem associated with permutation and suddenly have no good idea, “permutation graph” maybe helpful.</p>
+<p>problems list:</p>
+<ol>
+<li><a href="http://codeforces.com/problemset/problem/441/D" target="_blank" rel="external">CF 441D: The property of that every swap increase or decrease the number of cycles in a permutation is very useful</a>.</li>
+<li><a href="http://codeforces.com/problemset/problem/612/E" target="_blank" rel="external">CF 612E</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Aglorithm/">Aglorithm</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+</article>
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/page/2/">&laquo; Назад</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Далее &raquo;</a>
+      </nav>
+    </section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Tong Wei&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

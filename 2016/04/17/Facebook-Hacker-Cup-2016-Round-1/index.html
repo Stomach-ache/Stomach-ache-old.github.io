@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Facebook Hacker Cup 2016 Round 1 - TongWei@NJU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is a simple solutions to problems of Facebook Hacker Cup 2016 Round 1.The contest begins at 02:00 17/1/2016, but suddently I just cannot access facebook which nearly drived me mad, and on the nig">
+<meta name="keywords" content="Algorithm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Facebook Hacker Cup 2016 Round 1">
+<meta property="og:url" content="http://yoursite.com/2016/04/17/Facebook-Hacker-Cup-2016-Round-1/index.html">
+<meta property="og:site_name" content="TongWei@NJU">
+<meta property="og:description" content="This is a simple solutions to problems of Facebook Hacker Cup 2016 Round 1.The contest begins at 02:00 17/1/2016, but suddently I just cannot access facebook which nearly drived me mad, and on the nig">
+<meta property="og:updated_time" content="2016-07-08T05:53:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Facebook Hacker Cup 2016 Round 1">
+<meta name="twitter:description" content="This is a simple solutions to problems of Facebook Hacker Cup 2016 Round 1.The contest begins at 02:00 17/1/2016, but suddently I just cannot access facebook which nearly drived me mad, and on the nig">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-Facebook-Hacker-Cup-2016-Round-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Facebook Hacker Cup 2016 Round 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2016/04/17/Facebook-Hacker-Cup-2016-Round-1/" class="article-date">
+  <time datetime="2016-04-17T08:13:54.000Z" itemprop="datePublished">2016-04-17</time>
+</a>
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This is a simple solutions to problems of Facebook Hacker Cup 2016 Round 1.<br>The contest begins at 02:00 17/1/2016, but suddently I just cannot access facebook which nearly drived me mad, and on the night of next day(18/1/2016) it became accessible, I do nothing in the duration.<br>I read the 1st problem and solved it in twenty minutes. But after reading the 2nd problem, I thought it was a greedy algorithm but without came up with any good idea. Then I tried binary search and it didn’t work at all. I slept lol.</p>
+<h2 id="Problems-Link"><a href="#Problems-Link" class="headerlink" title="Problems Link"></a><a href="http://codeforces.com/gym/100875/attachments/download/4039/2016-facebook-hacker-cup-round-1-en.pdf" target="_blank" rel="external">Problems Link</a></h2><p>Problem A: greedily take more problems as you can. suppose we are now at i’th problem, check whether we can take 4 continous problems start at position i, if we cann’t, check 3, 2, 1 in the same way.<br>Problem B: using priority queue to keep trace of the time that every washer can finish one load clothes after finishing all former given clothes and initially queue was populated with pairs of (w[i], i) for each washer. In this way we can manage to finish all load of clothes as early as possible. we use the same way to dryers.<br>Problem C: attention that initial money coder has is a real number not a integer.<br>since choosing uniformly at random from the range [A, B], so the probability of every number to be chosen is equal to $\frac{1}{B−A}$. so now what we need is the left money for all initial savings we may choose. It’s not difficult to find that the equation consists of a series segments and our answer is total area of trangles formed by those segments with x-axis. finally we can compute area from 0 to A and 0 to B respectively.<br>Problem D: using bitmask dynamic programming.<br>since factorial of 16 is too large so we cannot try every permutation. but you will notice there only five round at most because we choose one from every pair competitors each round that is the placing a competitor can have is in (1, 2, 3, 5, 9).<br>in addition, if a competitor can beat every other competitors than he will always end up with first placing. otherwise we can make he lose at the first round with placing $\lfloor n \rfloor + 1$.<br>using dp[s][i] represents the i’th competitor can be a winner if he fights with competitors whose coresponding bit is set in integer s (the number of bits set in s can only be 1 or 2 or 4 or 8 or 16). Initially, dp[1&lt;&lt;i][i] is always true because there is only one competitor in this state and he is the winner without doubt. If we have dp[s][i] = dp[t][j] = true and s &amp; t = 0 and win[i][j] = true than dp[s|t][i] = true otherwise dp[s|t][j] = true.<br>The best placing for each competitor can be calculated by the largest subset of fixed size(1,2,4,8,16) he can win.</p>
+
+      
+    </div>
+    
+    
+      <footer class="article-footer">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algorithm/">Algorithm</a></li></ul>
+
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/04/27/Permutation-Graph/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Permutation Graph
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/04/08/Facebook-Hacker-Cup-2016-Qualification-Round/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Facebook Hacker Cup 2016 Qualification Round&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Tong Wei&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
