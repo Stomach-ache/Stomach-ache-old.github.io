@@ -16,14 +16,11 @@
 <meta name="twitter:title" content="Tong Wei NJU">
 <meta name="twitter:description" content="This post is written to keep some simple and useful skills to generate random numbers in c++and is inspired when I was trying to solve this problem on Hackerrank.What I was trying to do is hash a set">
   
-    <link rel="alternate" href="/atom.xml" title="Tong Wei NJU" type="application/atom+xml">
-  
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="/css/style.css">
   
 
@@ -31,48 +28,43 @@
 
 <body>
   <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
+    <header id="header">
   <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Tong Wei NJU</a>
-      </h1>
-      
-    </div>
     <div id="header-inner" class="inner">
+      <a id="main-nav-toggle" class="nav-icon" href="javascript:;"></a>
+      <a id="logo" class="logo" href="/"></a>
       <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
         
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
       </nav>
       <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
       </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
     </div>
   </div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-Random-Number-Generator-in-Cpp" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/05/10/Random-Number-Generator-in-Cpp/" class="article-date">
-  <time datetime="2017-05-10T12:07:56.000Z" itemprop="datePublished">2017-05-10</time>
-</a>
-    
-  </div>
+    <section id="main" class="outer"><article id="post-Random-Number-Generator-in-Cpp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
+    <div class="article-meta">
+      <a href="/2017/05/10/Random-Number-Generator-in-Cpp/" class="article-date">
+  <time datetime="2017-05-10T12:07:56.000Z" itemprop="datePublished">2017-05-10</time>
+</a>
+      
+      
+    </div>
     <div class="article-entry" itemprop="articleBody">
       
         <p>This post is written to keep some simple and useful skills to generate random numbers in c++<br>and is inspired when I was trying to solve <a href="https://www.hackerrank.com/contests/101hack48/challenges/almost-equal-rows/copy-from/1301587025" target="_blank" rel="external">this problem</a> on Hackerrank.<br>What I was trying to do is hash a set of integers by assigning each distinct integer an unique random number and got these random numbers<br>acrossed together by applying xor operation one by one. Unfortunately, I got wrong answer at the first several tries and seek help from others’ solutions.<br>Then I used a random number generator named <code>mt19937_64</code> and pass all test cases. This is fucking amazing, I thought at that moment :P</p>
@@ -89,11 +81,12 @@
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/10/Random-Number-Generator-in-Cpp/" data-id="cj2j2rxxa0000mepixfdr6h7w" class="article-share-link">Partager</a>
-      
-      
-    </footer>
+    
+    
+      <footer class="article-footer">
+        
+      </footer>
+    
   </div>
   
     
@@ -101,8 +94,7 @@
   
   
     <a href="/2017/05/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Hello World&nbsp;<span>&gt;</span></div>
     </a>
   
 </nav>
@@ -111,69 +103,18 @@
 </article>
 
 </section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/05/10/Random-Number-Generator-in-Cpp/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/10/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
+    <footer id="footer">
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 Tong Wei<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2017 Tong Wei&nbsp;
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>, theme by <a href="http://github.com/ppoffice">PPOffice</a>
     </div>
   </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -181,7 +122,6 @@
 
 
 <script src="/js/script.js"></script>
-
   </div>
 </body>
 </html>
